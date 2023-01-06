@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+    font-family: "Poppins";
+    user-select: none;
+}
+
+body {
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+:link {
+    color: #fff;
+}
+
+/* HEAD **********************************************************************/
+
+header {
+    font-size: 3em;
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+#banner {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    height: 4em;
+    width: 4em;
+    object-fit: cover;
+    filter: brightness(130%);
+}
+
+#name {
+    margin: 0;
+}
+
+#place {
+    font-size: 0.4em;
+    margin-top: 0;
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 1000px) {
+    #banner {
+        object-fit: cover;
+    }
+}
+
+/* LINK GRID *****************************************************************/
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25em, 1fr));
+    grid-gap: 20px;
+}
+
+hr {
+    margin: 2.5em 5em;
+    border: 2px dotted #666;
+    border-radius: 50%;
+}
+
+.box {
+    font-size: 2em;
+    padding: 0.5em;
+    text-align: left;
+    color: #fff;
+    transition: filter 0.1s ease-in-out;
+    cursor: pointer;
+    border-radius: 0.5em;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.box > .boxsplash {
+    opacity: 0;
+    font-size: 0.2em;
+    transition: opacity 0.1s ease-in-out, font-size 0.1s ease-in-out;
+}
+
+.box > .boxname {
+    transition: opacity 0.1s ease-in-out, font-size 0.1s ease-in-out;
+}
+
+.box > a {
+    transition: transform 0.1s ease-in-out, font-size 0.1s ease-in-out;
+}
+
+.box:hover {
+    filter: contrast(125%);
+}
+
+.box:hover > .boxsplash {
+    opacity: 1;
+    font-size: 1em;
+}
+
+.box:hover > .boxname {
+    font-size: 0em;
+}
+
+.box:hover > a {
+    transform: rotate(-9deg);
+    font-size: 1.2em;
+}
+
+.fab, .fa-solid {
+    font-size: 1em;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff !important;
+}
+
+/* ICONS *********************************************************************/
+
+.linkedin {
+    background-color: #0077b5;
+}
+
+.email {
+    background-color: #ea4335;
+}
+
+.github {
+    background-color: #6e5494;
+}
+
+.keybase {
+    background-color: #f36f28;
+}
+
+.music {
+    background-color: #0e9442;
+}
+
+.webdes {
+    background-color: #666;
+}
+
+/* BG MAGIC ******************************************************************/
+/* Credits to https://codepen.io/Rowno/pen/EVEgJb                            */
+
+html {
+    animation: theme 21s linear infinite;
+}
+html:after,
+html:before {
+    content: "";
+    display: block;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    width: 100vmax;
+    height: 100vmax;
+    background: rgba(0, 0, 0, 0.05);
+    animation: background 90s linear infinite;
+}
+
+html:after {
+    left: 15vw;
+}
+
+html:before {
+    right: 15vw;
+    animation-delay: -30s;
+    animation-direction: reverse;
+}
+
+@keyframes theme {
+    0% {
+        background: #26292b;
+    }
+
+
+
+    100% {
+        background: #26292b;
+    }
+}
+
+@keyframes background {
+    0% {
+        transform: rotate(90deg);
+    }
+
+    100% {
+        transform: rotate(450deg);
+    }
+}

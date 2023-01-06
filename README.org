@@ -1,0 +1,19 @@
+* Social hub
+
+This repository hosts the website code for my social hub, which can be accessed via [[berkefiliz.com]].
+
+** Installation
+
+No additional installation is required as the project uses pure JS, HTML and CSS. A browser with internet access (for CDN links) should suffice.
+
+** Project structure
+
+The project follows a standard structure.
+
+| Name | Description |
+|---|---|
+| index.html | Homepage HTML |
+| README.org | Description of the project |
+| styles.css | Main CSS for the site |
+| favicon.ico | Icon for the website at the browser tab |
+| banner.jpg | Profile image |
