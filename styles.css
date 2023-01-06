@@ -31,14 +31,21 @@ header {
     height: 4em;
     width: 4em;
     object-fit: cover;
-    filter: brightness(130%);
+    filter: brightness(120%);
+    border: 2px solid #666;
+    transition: border-radius 0.1s ease-in-out, border 0.1s ease-in-out;
+}
+
+#banner:hover {
+    border-radius: 0.5em;
+    border: 2px solid white;
 }
 
 #name {
     margin: 0;
 }
 
-#place {
+#desc {
     font-size: 0.4em;
     margin-top: 0;
     opacity: 0.7;
@@ -107,7 +114,8 @@ hr {
     font-size: 1.2em;
 }
 
-.fab, .fa-solid {
+.fab,
+.fa-solid {
     font-size: 1em;
     width: 50px;
     text-align: center;
@@ -176,8 +184,6 @@ html:before {
     0% {
         background: #26292b;
     }
-
-
 
     100% {
         background: #26292b;
